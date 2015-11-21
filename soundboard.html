@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Collective Health Soundboard</title>
+  <link rel="stylesheet" type="text/css" href="./assets/css/sound.css">
+</head>
+<body>
+<div id="doc">
+<h1>Collective Health Soundboard</h1>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+                $("audio").removeAttr("controls").each(function(i, audioElement) {
+                    var audio = $(this);
+                    var that = this;
+                    $("#doc").append($('<button>'+audio.attr("title")+'</button>').click(function() {
+                        that.play();
+                    }));
+                });
+            });
+</script>
+<audio src="./assets/audio/gregone.mp4" controls autobuffer="true" title="GREG"></audio>
+</div>
+</body>
+</html>
